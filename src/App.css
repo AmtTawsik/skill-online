@@ -1,0 +1,7 @@
+nav .active {
+    color: orange
+}
+.courses{
+    grid-template-columns: 1fr 4fr;
+    gap: 25px;
+}
