@@ -14,7 +14,7 @@ const PremiumAccess = () => {
   }
 
   return (
-    <div className="card card-compact bg-base-100 shadow-xl w-2/6 mx-auto my-7">
+    <div className="card card-compact bg-base-100 shadow-xl md:w-2/6 mx-auto my-7">
       <figure>
         <img className="w-11/12" src={image} alt="Shoes" />
       </figure>

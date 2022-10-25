@@ -1,8 +1,46 @@
 import React from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../Contexts/AuthProvider";
+import {GoogleAuthProvider, GithubAuthProvider} from 'firebase/auth'
 
 // This is Login Page
 const Login = () => {
+
+  const {ProviderLogin,signIn} = useContext(AuthContext);
+
+  const googleProvider = new GoogleAuthProvider();
+  const githubProvider = new GithubAuthProvider();
+
+  const handleSignIn = (event) =>{
+    event.preventDefault();
+    const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    signIn(email,password)
+    .then(result =>{
+      const user =result.user;
+      console.log(user)
+    })
+    .catch(error => console.log(error))
+  }
+
+  const handleGoogleSignIn = () =>{
+    ProviderLogin(googleProvider)
+    .then(result => {
+      const user = result.user;
+      console.log(user)
+    })
+    .catch(error => console.log(error))
+  }
+  const handleGithubSignIn = () =>{
+    ProviderLogin(githubProvider)
+    .then(result => {
+      const user = result.user;
+      console.log(user)
+    })
+    .catch(error => console.log(error))
+  }
   return (
     <div className="hero min-h-screen bg-base-200">
       <div className="hero-content flex-col lg:flex-row-reverse">
@@ -14,32 +52,37 @@ const Login = () => {
           </p>
         </div>
         <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-          <form className="card-body">
+          <form onSubmit={handleSignIn} className="card-body">
+
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Email</span>
               </label>
               <input
                 type="text"
+                name="email"
                 placeholder="email"
                 className="input input-bordered"
               />
             </div>
+
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Password</span>
               </label>
               <input
                 type="text"
+                name="password"
                 placeholder="password"
                 className="input input-bordered"
               />
+            </div>
+
               <label className="label">
                 <a href="#" className="label-text-alt link link-hover">
                   Forgot password?
                 </a>
               </label>
-            </div>
             <div className="form-control mt-2">
               <button type="submit" className="btn bg-emerald-400 hover:bg-emerald-600 text-white font-bold border-0">Login</button>
             </div>
@@ -58,6 +101,7 @@ const Login = () => {
             </div>
             <div className="my-0 space-y-2">
               <button
+                onClick={handleGoogleSignIn}
                 aria-label="Login with Google"
                 type="button"
                 className="flex items-center justify-center w-full p-2 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 dark:border-gray-400 hover:bg-emerald-400"
@@ -72,6 +116,7 @@ const Login = () => {
                 Login with Google
               </button>
               <button
+                onClick={handleGithubSignIn}
                 aria-label="Login with Github"
                 type="button"
                 className="flex items-center justify-center w-full p-2 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 dark:border-gray-400 hover:bg-emerald-400"
