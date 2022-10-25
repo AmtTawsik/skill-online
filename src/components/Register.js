@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+// This is Register Page
 const Register = () => {
   return (
     <div>
