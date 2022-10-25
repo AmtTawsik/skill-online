@@ -1,5 +1,6 @@
 import React from 'react';
 
+// This is Blog Page
 const Blog = () => {
     return (
         <div>
