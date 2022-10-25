@@ -7,7 +7,7 @@ import { AuthContext } from "../Contexts/AuthProvider";
 // This is Register Page
 const Register = () => {
 
-  const { user,createUser } = useContext(AuthContext);
+  const { user,createUser,updateUserProfile } = useContext(AuthContext);
 
   const handleSubmit = (event) =>{
     event.preventDefault();
@@ -20,8 +20,22 @@ const Register = () => {
     .then(result =>{
       const user =result.user;
       console.log(user)
+      form.reset();
+      handleUpdateUserProfile(name,photo);
     })
     .catch(error => console.log(error))
+  }
+
+
+  const handleUpdateUserProfile = (name , photo)=>{
+    const profile = {
+      displayName : name,
+      photoURL:photo,
+    }
+    updateUserProfile(profile)
+    .then(()=>{})
+    .catch(e=>console.log(e))
+
   }
   return (
     <div>
