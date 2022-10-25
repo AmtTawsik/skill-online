@@ -1,6 +1,7 @@
 import React from "react";
 import bg from '../assets/bg.jpg'
 
+// This is Home Page
 const Home = () => {
   return (
     <div
