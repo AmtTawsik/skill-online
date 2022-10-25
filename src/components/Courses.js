@@ -5,6 +5,7 @@ import { useState } from "react";
 import Course from "./Course";
 import { Link } from "react-router-dom";
 
+// Here is All Courses.
 const Courses = () => {
   const [courses, setCourses] = useState([]);
 
