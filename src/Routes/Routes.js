@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Blog from "../components/Blog";
 import CourseDetails from "../components/CourseDetails";
 import Courses from "../components/Courses";
+import ErrorPage from "../components/ErrorPage";
 import FaQ from "../components/FaQ";
 import Home from "../components/Home";
 import Login from "../components/Login";
@@ -14,6 +15,7 @@ export const routes = createBrowserRouter([
     {
         path:'/',
         element:<Main></Main>,
+        errorElement:<ErrorPage></ErrorPage>,
         children:[
             {
                 path:'/',

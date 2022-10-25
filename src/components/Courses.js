@@ -22,7 +22,7 @@ const Courses = () => {
         <hr />
         <br />
         {
-            courses.map(course => <Link key={course.id}><button className="text-center mx-auto bg-green-500 hover:bg-green-700 font-serif md:font-bold md:text-2xl w-full py-2 px-5 mb-1 md:mb-3 rounded-lg">{course.category}</button><br/></Link>)
+            courses.map(course => <Link to={`/course/${course.id}`} key={course.id}><button className="text-center mx-auto bg-green-500 hover:bg-green-700 font-serif md:font-bold md:text-2xl w-full py-2 px-5 mb-1 md:mb-3 rounded-lg">{course.category}</button><br/></Link>)
         }
       </div>
       
