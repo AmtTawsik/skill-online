@@ -1,5 +1,6 @@
 import React from "react";
 
+// This is footer page
 const Footer = () => {
   return (
     <footer className="footer footer-center p-10 bg-teal-100 text-emerald-600">
