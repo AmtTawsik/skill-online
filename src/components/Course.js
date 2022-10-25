@@ -13,7 +13,7 @@ const Course = ({course}) => {
         <h2 className="card-title text-fuchsia-600">{title}</h2>
         <p className="font-bold">This course is from {category} Category</p>
         <div className="card-actions justify-end">
-          <Link to={`/course/${id}`}><button className="btn btn-primary">Course Details</button></Link>
+          <Link to={`/category/${category}`}><button className="btn btn-primary">Course Details</button></Link>
         </div>
       </div>
     </div>

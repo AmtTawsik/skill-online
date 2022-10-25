@@ -6,6 +6,7 @@ import ErrorPage from "../components/ErrorPage";
 import FaQ from "../components/FaQ";
 import Home from "../components/Home";
 import Login from "../components/Login";
+import PremiumAccess from "../components/PremiumAccess";
 import Register from "../components/Register";
 import Main from "../layout/Main";
 
@@ -38,8 +39,8 @@ export const routes = createBrowserRouter([
                 element:<Courses></Courses>,
             },
             {
-                path:'/course/:id',
-                loader:({params})=>fetch(`https://skill-online-server.vercel.app/courses/${params.id}`),
+                path:'/category/:id',
+                loader:({params})=>fetch(`https://skill-online-server.vercel.app/category/${params.id}`),
                 element:<CourseDetails></CourseDetails>,
             },
             {
@@ -49,6 +50,11 @@ export const routes = createBrowserRouter([
             {
                 path:'/register',
                 element:<Register></Register>,
+            },
+            {
+                path:'/courses/:id',
+                loader:({params})=>fetch(`https://skill-online-server.vercel.app/courses/${params.id}`),
+                element:<PremiumAccess></PremiumAccess>,
             },
         ]
     }

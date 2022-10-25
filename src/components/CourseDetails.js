@@ -6,7 +6,7 @@ import Pdf from "react-to-pdf";
 const CourseDetails = () => {
   const course = useLoaderData();
 //   console.log(course);
-  const { category, description, id, image, price, title, rating } = course;
+  const { description, id, image, price, title, rating } = course;
 
   const ref = React.createRef();
 
@@ -27,7 +27,7 @@ const CourseDetails = () => {
         <h3 className="text-3xl md:ml-36">Price: ${price}</h3>
         <div className="card-actions justify-end">
             <Link to='/courses'><button className="btn btn-primary"><FaArrowLeft></FaArrowLeft>Get premium access</button></Link>
-            <button className="btn btn-primary">Get premium access<FaArrowRight></FaArrowRight></button>
+            <Link to={`/courses/${id}`}><button className="btn btn-primary">Get premium access<FaArrowRight></FaArrowRight></button></Link>
         </div>
       </div>
       </div>
