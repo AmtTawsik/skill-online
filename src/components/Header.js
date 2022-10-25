@@ -4,11 +4,13 @@ import logo from "../assets/logo.png";
 import { Link, NavLink } from "react-router-dom";
 import { FaBeer, FaSignOutAlt } from "react-icons/fa";
 
+// This is header Page
+
 const Header = () => {
   const [state, setState] = useState(false);
   const user =2;
 
-  // Replace javascript:void(0) path with your path
+ 
   const navigation = [
     { title: "Home", path: "/home" },
     { title: "Courses", path: "/courses" },
