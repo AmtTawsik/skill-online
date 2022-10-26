@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import bg from '../assets/bg.jpg'
 
 // This is Home Page
@@ -16,7 +17,7 @@ const Home = () => {
             Skill online is one of the most populer website for learn online. You can easyly purches Any kind of skill courses from our website.
             just click the button and start a new jaurny of learning with us.
           </p>
-          <button className="btn btn-primary">Get Started</button>
+          <Link to='/courses'><button className="btn btn-primary">Get Started</button></Link>
         </div>
       </div>
     </div>

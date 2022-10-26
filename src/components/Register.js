@@ -60,6 +60,7 @@ const Register = () => {
                   type="text"
                   name="name"
                   className="block w-full mt-1 p-2 border-gray-300 rounded-md shadow-lg focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                  required
                 />
               </div>
             </div>
@@ -76,6 +77,7 @@ const Register = () => {
                   type="text"
                   name="photo"
                   className="block w-full mt-1 p-2 border-gray-300 rounded-md shadow-lg focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                  required
                 />
               </div>
             </div>
@@ -92,6 +94,7 @@ const Register = () => {
                   type="email"
                   name="email"
                   className="block w-full mt-1 p-2 border-gray-300 rounded-md shadow-lg focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                  required
                 />
               </div>
             </div>
@@ -108,6 +111,7 @@ const Register = () => {
                   type="password"
                   name="password"
                   className="block w-full mt-1 p-2 border-gray-300 rounded-md shadow-lg focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                  required
                 />
               </div>
             </div>
