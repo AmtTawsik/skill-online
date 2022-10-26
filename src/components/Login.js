@@ -4,6 +4,8 @@ import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Contexts/AuthProvider";
 import { GoogleAuthProvider, GithubAuthProvider } from "firebase/auth";
+import { useState } from "react";
+import toast from "react-hot-toast";
 
 
 const Login = () => {
@@ -12,6 +14,7 @@ const Login = () => {
   const location = useLocation();
   const googleProvider = new GoogleAuthProvider();
   const githubProvider = new GithubAuthProvider();
+  const [error, setError] = useState(' ');
 
   const from = location.state?.from?.pathname || "/";
 
@@ -27,8 +30,10 @@ const Login = () => {
         console.log(user);
         form.reset();
         navigate(from, { replace: true });
+        setError(' ')
+        toast.success('Login successfull')
       })
-      .catch((error) => console.log(error));
+      .catch((error) => setError(error.message));
   };
 
   const handleGoogleSignIn = () => {
@@ -86,11 +91,6 @@ const Login = () => {
               />
             </div>
 
-            <label className="label">
-              <a href="#" className="label-text-alt link link-hover">
-                Forgot password?
-              </a>
-            </label>
             <div className="form-control mt-2">
               <button
                 type="submit"
@@ -106,13 +106,16 @@ const Login = () => {
                 Register Now!
               </Link>
             </p>
+            {/* error message */}
+            <p className="text-red-600 text-center font-lg">{error}</p>
           </form>
+          
           <div className="flex items-center w-full my-0">
             <hr className="w-full" />
             <p className="px-3 ">OR</p>
             <hr className="w-full" />
           </div>
-          <div className="my-0 space-y-2 p-5">
+          <div className="my-0 space-y-2 p-5 mt-0">
             {/* Google Login */}
             <button
               onClick={handleGoogleSignIn}

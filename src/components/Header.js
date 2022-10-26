@@ -10,6 +10,17 @@ import { AuthContext } from "../Contexts/AuthProvider";
 const Header = () => {
   const [state, setState] = useState(false);
 
+  // const [dark,setDark] = useState('light')
+  const isChecked = () =>{
+    if(dark === 'light'){
+      setDark('dark')
+    }
+    else{
+      setDark('light')
+    }
+    
+  }
+
   // Navigations are here
   const navigation = [
     { title: "Home", path: "/home" },
@@ -19,7 +30,7 @@ const Header = () => {
   ];
 
   // use of useContext
-  const { user, logOut } = useContext(AuthContext);
+  const { user, logOut,dark,setDark } = useContext(AuthContext);
 
   // LogOut function
   const handleLogout = () => {
@@ -28,7 +39,7 @@ const Header = () => {
       .catch((error) => console.log(error));
   };
   return (
-    <nav className="bg-teal-100 w-full border-b md:border-0 md:static">
+    <nav id={dark} className="bg-teal-100 w-full border-b md:border-0 md:static">
       <div className="items-center px-4  mx-auto md:flex md:px-8">
         <div className="flex items-center justify-between py-3 md:py-5 md:block">
           <Link to="/">
@@ -136,7 +147,7 @@ const Header = () => {
 
             <li>
               <label className="swap swap-rotate">
-                <input type="checkbox" />
+                <input onClick={isChecked} type="checkbox" />
 
                 <svg
                   className="swap-on fill-current w-10 h-10"

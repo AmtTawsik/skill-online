@@ -15,3 +15,6 @@ nav .active {
     padding: 5px;
     border-radius: 10px;
 }
+#dark{
+    background-color: rgb(196, 165, 223);
+}

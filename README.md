@@ -2,7 +2,7 @@
 
 ### Live Site Link : http://www.google.fr/
 
-### Server Link :
+### Server Link :https://skill-online-server.vercel.app/category/
 
 #### Features and Functionality :
 

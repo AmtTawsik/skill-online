@@ -19,6 +19,7 @@ const AuthProvider = ({ children }) => {
   // all States are here
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [dark,setDark] = useState('light')
 
   // Provider login function is here
   const ProviderLogin = (provider) => {
@@ -75,6 +76,8 @@ const AuthProvider = ({ children }) => {
     logOut,
     createUser,
     signIn,
+    dark,
+    setDark,
   };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
