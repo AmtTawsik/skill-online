@@ -26,7 +26,7 @@ const CourseDetails = () => {
         <span className="text-xl font-bold flex items-center text-yellow-500 md:ml-36">Rating : {rating.rate}<FaStar/></span>
         <h3 className="text-3xl md:ml-36">Price: ${price}</h3>
         <div className="card-actions justify-end">
-            <Link to='/courses'><button className="btn btn-primary"><FaArrowLeft></FaArrowLeft>Get premium access</button></Link>
+            <Link to='/courses'><button className="btn btn-primary"><FaArrowLeft></FaArrowLeft>Go back home</button></Link>
             <Link to={`/courses/${id}`}><button className="btn btn-primary">Get premium access<FaArrowRight></FaArrowRight></button></Link>
         </div>
       </div>

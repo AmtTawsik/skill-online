@@ -9,6 +9,7 @@ import Login from "../components/Login";
 import PremiumAccess from "../components/PremiumAccess";
 import Register from "../components/Register";
 import Main from "../layout/Main";
+import PrivateRoute from "./PrivateRoute";
 
 // All routes are here
 
@@ -54,7 +55,7 @@ export const routes = createBrowserRouter([
             {
                 path:'/courses/:id',
                 loader:({params})=>fetch(`https://skill-online-server.vercel.app/courses/${params.id}`),
-                element:<PremiumAccess></PremiumAccess>,
+                element:<PrivateRoute><PremiumAccess></PremiumAccess></PrivateRoute>,
             },
         ]
     }
