@@ -1,4 +1,5 @@
 import React from "react";
+import '../App.css'
 import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Contexts/AuthProvider";
@@ -49,11 +50,11 @@ const Login = () => {
       .catch((error) => console.log(error));
   };
   return (
-    <div className="hero min-h-screen bg-base-200">
+    <div className="hero min-h-screen bg-base-200 login-from">
       <div className="hero-content flex-col lg:flex-row-reverse">
-        <div className="text-center lg:text-left">
-          <h1 className="text-5xl font-bold">Login now!</h1>
-          <p className="py-6">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold text-white">Login now!</h1>
+          <p className="py-6 text-orange-500 text-lg">
             Skill online is one of the most populer website for learn online.
             You can easyly purches Any kind of skill courses from our website.
             just click the button and start a new jaurny of learning with us.
@@ -111,7 +112,8 @@ const Login = () => {
             <p className="px-3 ">OR</p>
             <hr className="w-full" />
           </div>
-          <div className="my-0 space-y-2">
+          <div className="my-0 space-y-2 p-5">
+            {/* Google Login */}
             <button
               onClick={handleGoogleSignIn}
               aria-label="Login with Google"
@@ -127,6 +129,7 @@ const Login = () => {
               </svg>
               Login with Google
             </button>
+            {/* Github Login */}
             <button
               onClick={handleGithubSignIn}
               aria-label="Login with Github"

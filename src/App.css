@@ -5,3 +5,13 @@ nav .active {
     grid-template-columns: 1fr 4fr;
     gap: 25px;
 }
+
+.login-from{
+    background-image: url('https://wallpaperaccess.com/full/1900857.jpg');
+}
+
+.faq-sec{
+    background-color: lightpink;
+    padding: 5px;
+    border-radius: 10px;
+}
