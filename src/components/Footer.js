@@ -23,6 +23,7 @@ const Footer = () => {
         <p>Copyright © 2022 - All right reserved</p>
       </div>
       <div>
+        {/* Sosial Medias */}
         <div className="grid grid-flow-col gap-4">
           <a href="http://www.facebook.com/amttawsik" target="blank">
             <svg

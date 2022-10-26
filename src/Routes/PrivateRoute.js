@@ -1,12 +1,12 @@
 import React from "react";
 import { useContext } from "react";
-import { FaSpinner } from "react-icons/fa";
 import { Navigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../Contexts/AuthProvider";
 
 const PrivateRoute = ({ children }) => {
   const { user, loading } = useContext(AuthContext);
   const location = useLocation();
+  // Loading condition
   if (loading) {
     return (
       <div class="text-center">
@@ -31,6 +31,9 @@ const PrivateRoute = ({ children }) => {
       </div>
     );
   }
+
+  // privet route condition
+
   if (!user) {
     return <Navigate to="/login" state={{ from: location }} replace></Navigate>;
   }

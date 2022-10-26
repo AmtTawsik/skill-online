@@ -7,8 +7,10 @@ import { Link } from "react-router-dom";
 
 
 const Courses = () => {
+  // courses state dicliaration
   const [courses, setCourses] = useState([]);
 
+  // fetch data from my server
   useEffect(() => {
     fetch(`https://skill-online-server.vercel.app/courses`)
       .then((res) => res.json())
@@ -16,6 +18,7 @@ const Courses = () => {
   }, []);
   return (
     <div className="md:grid container my-4 w-11/12 mx-auto courses">
+      {/* Left Side Navigation Bar */}
       <div className="">
         <h1 className="text-center font-extrabold text-4xl mb-2 font-serif text-teal-500">
           Category
@@ -32,6 +35,7 @@ const Courses = () => {
         ))}
       </div>
 
+          {/* Main Content */}
       <div className="grid md:grid-cols-3 gap-6">
         {courses.map((course) => (
           <Course key={course.id} course={course}></Course>

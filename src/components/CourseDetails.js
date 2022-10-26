@@ -1,17 +1,19 @@
 import React from "react";
-import { FaArrowLeft, FaArrowRight, FaDownload, FaStar } from "react-icons/fa";
+import { FaArrowRight, FaDownload, FaStar } from "react-icons/fa";
 import { Link, useLoaderData } from "react-router-dom";
 import Pdf from "react-to-pdf";
 
 const CourseDetails = () => {
   const course = useLoaderData();
   //   console.log(course);
+  //   Distructring of course.
   const { description, id, image, price, title, rating } = course;
 
   const ref = React.createRef();
 
   return (
     <>
+    {/* Course Details Header with pdf button */}
       <div className="flex items-center justify-center">
         <h1 className="text-2xl md:text-5xl font-extrabold text-green-500">
           Course Details
@@ -49,6 +51,7 @@ const CourseDetails = () => {
             </span>
             <h3 className="text-3xl">Price: ${price}</h3>
             <div className="card-actions justify-end">
+            {/* Get premium access Button */}
               <Link to={`/courses/${id}`}>
                 <button className="btn btn-primary">
                   Get premium access<FaArrowRight></FaArrowRight>

@@ -43,6 +43,7 @@ const Register = () => {
         </div>
         <div className="w-full px-6 py-4 mt-6 overflow-hidden bg-white shadow-md sm:max-w-lg sm:rounded-lg">
           <form onSubmit={handleSubmit}>
+            {/* Input Fuild for Full Name */}
             <div>
               <label
                 htmlFor="name"
@@ -60,6 +61,7 @@ const Register = () => {
               </div>
             </div>
 
+            {/* Input Fuild for photo url */}
             <div className="mt-4">
               <label
                 htmlFor="name"
@@ -71,12 +73,12 @@ const Register = () => {
                 <input
                   type="text"
                   name="photo"
-                  className="block w-full mt-1 p-2 border-gray-300 rounded-md shadow-lg focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                  required
+                  className="block w-full mt-1 p-2 border-gray-300 rounded-md shadow-lg focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"               
                 />
               </div>
             </div>
 
+            {/* Input Fuild for Email */}
             <div className="mt-4">
               <label
                 htmlFor="email"
@@ -94,6 +96,7 @@ const Register = () => {
               </div>
             </div>
 
+            {/* Input Fuild for Password */}
             <div className="mt-4">
               <label
                 htmlFor="password"
@@ -111,6 +114,7 @@ const Register = () => {
               </div>
             </div>
 
+            {/* Register Button */}
             <div className="flex items-center mt-4">
               <button className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-purple-700 rounded-md hover:bg-purple-600 focus:outline-none focus:bg-purple-600">
                 Register

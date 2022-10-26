@@ -10,6 +10,7 @@ import { AuthContext } from "../Contexts/AuthProvider";
 const Header = () => {
   const [state, setState] = useState(false);
 
+  // Navigations are here
   const navigation = [
     { title: "Home", path: "/home" },
     { title: "Courses", path: "/courses" },
@@ -17,8 +18,10 @@ const Header = () => {
     { title: "FAQ", path: "/faq" },
   ];
 
+  // use of useContext
   const { user, logOut } = useContext(AuthContext);
 
+  // LogOut function
   const handleLogout = () => {
     logOut()
       .then(() => {})
@@ -76,6 +79,7 @@ const Header = () => {
             state ? "block" : "hidden"
           }`}
         >
+          {/* navBar items are here */}
           <ul className="justify-end items-center space-y-6 md:flex md:space-x-4 md:space-y-0 mr-0">
             {navigation.map((item, idx) => {
               return (
@@ -97,6 +101,7 @@ const Header = () => {
                     className="avatar tooltip md:tooltip-bottom tooltip-right tooltip-secondary"
                     data-tip={user.displayName ? user.displayName : "User"}
                   >
+                    {/* Profile Image is Here */}
                     <div className="w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                       {user.photoURL ? (
                         <img alt="dp" src={user.photoURL} />

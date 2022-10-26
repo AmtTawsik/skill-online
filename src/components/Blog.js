@@ -8,6 +8,7 @@ const Blog = () => {
       </h1>
       <hr />
       <div>
+        {/* Blog-1 */}
         <div className="bg-teal-300 p-10 m-10 rounded-lg">
           <h1 className="text-2xl text-amber-600 font-extrabold">Blog-1</h1>
           <h5 className="text-xl text-cyan-800 font-bold">What is cors?</h5>
@@ -27,6 +28,7 @@ const Blog = () => {
           </p>
         </div>
 
+        {/* Blog-2 */}
         <div className="bg-teal-300 p-10 m-10 rounded-lg">
           <h1 className="text-2xl text-amber-600 font-extrabold">Blog-2</h1>
           <h5 className="text-xl text-cyan-800 font-bold">
@@ -43,6 +45,7 @@ const Blog = () => {
           </p>
         </div>
 
+        {/* Blog-3 */}
         <div className="bg-teal-300 p-10 m-10 rounded-lg">
           <h1 className="text-2xl text-amber-600 font-extrabold">Blog-3</h1>
           <h5 className="text-xl text-cyan-800 font-bold">
@@ -61,6 +64,7 @@ const Blog = () => {
           </p>
         </div>
 
+        {/* Blog-4 */}
         <div className="bg-teal-300 p-10 m-10 rounded-lg">
           <h1 className="text-2xl text-amber-600 font-extrabold">Blog-4</h1>
           <h5 className="text-xl text-cyan-800 font-bold">

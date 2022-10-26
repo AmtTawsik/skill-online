@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 
 const Course = ({ course }) => {
   // console.log(course)
-  const { category, image, title, id } = course;
+  // Distructcharing of course.
+  const { category, image, title} = course;
   return (
     <div className="card card-compact w-100 bg-base-100 shadow-xl">
       <figure>
@@ -13,6 +14,7 @@ const Course = ({ course }) => {
         <h2 className="card-title text-fuchsia-600">{title}</h2>
         <p className="font-bold">This course is from {category} Category</p>
         <div className="card-actions justify-end">
+          {/* course details button */}
           <Link to={`/category/${category}`}>
             <button className="btn btn-primary">Course Details</button>
           </Link>

@@ -8,9 +8,12 @@ import { AuthContext } from "../Contexts/AuthProvider";
 const PremiumAccess = () => {
   const { user } = useContext(AuthContext);
   const course = useLoaderData();
-  console.log(course);
+  // console.log(course);
+
+  // distructring data from course
   const { image, price, title, rating } = course;
 
+  // Payment Button Function
   const handelByeNow = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -66,6 +69,8 @@ const PremiumAccess = () => {
             className="input input-bordered input-accent w-full max-w-xs"
             required
           />
+
+          {/* reating section start */}
           <h3 className="text-lg">Give a Rating For Our Services:</h3>
           <div className="rating rating-lg rating-half mx-auto">
             <input type="radio" name="rating-10" className="rating-hidden" />
@@ -120,6 +125,7 @@ const PremiumAccess = () => {
               className="bg-green-500 mask mask-star-2 mask-half-2"
             />
           </div>
+          {/* reating section end*/}
           <div className="card-actions justify-end">
             <button type="submit" className="btn btn-primary">
               Make Payment <FaArrowAltCircleRight></FaArrowAltCircleRight>
