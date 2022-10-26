@@ -1,8 +1,8 @@
 # SKILL-ONLINE #
 
-### Live Site Link : http://www.google.fr/
+### Live Site Link : https://skill-online.web.app/
 
-### Server Link :https://skill-online-server.vercel.app/category/
+### Live Server Link :https://skill-online-server.vercel.app/category/
 
 #### Features and Functionality :
 
