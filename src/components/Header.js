@@ -6,7 +6,6 @@ import { FaSignOutAlt } from "react-icons/fa";
 import { useContext } from "react";
 import { AuthContext } from "../Contexts/AuthProvider";
 
-// This is header Page
 
 const Header = () => {
   const [state, setState] = useState(false);
@@ -96,7 +95,7 @@ const Header = () => {
                 <li>
                   <div
                     className="avatar tooltip md:tooltip-bottom tooltip-right tooltip-secondary"
-                    data-tip={user.displayName ? user.displayName : 'User'}
+                    data-tip={user.displayName ? user.displayName : "User"}
                   >
                     <div className="w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                       {user.photoURL ? (

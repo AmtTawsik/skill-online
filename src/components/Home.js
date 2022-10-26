@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import bg from '../assets/bg.jpg'
+import bg from "../assets/bg.jpg";
 
-// This is Home Page
 const Home = () => {
   return (
     <div
@@ -12,12 +11,17 @@ const Home = () => {
       <div className="hero-overlay bg-opacity-60"></div>
       <div className="hero-content text-center text-neutral-content">
         <div className="max-w-md">
-          <h1 className="mb-5 text-5xl font-extrabold font-serif text-white">SKILL-ONLINE</h1>
+          <h1 className="mb-5 text-5xl font-extrabold font-serif text-white">
+            SKILL-ONLINE
+          </h1>
           <p className="mb-5">
-            Skill online is one of the most populer website for learn online. You can easyly purches Any kind of skill courses from our website.
+            Skill online is one of the most populer website for learn online.
+            You can easyly purches Any kind of skill courses from our website.
             just click the button and start a new jaurny of learning with us.
           </p>
-          <Link to='/courses'><button className="btn btn-primary">Get Started</button></Link>
+          <Link to="/courses">
+            <button className="btn btn-primary">Get Started</button>
+          </Link>
         </div>
       </div>
     </div>

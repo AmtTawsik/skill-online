@@ -1,7 +1,7 @@
 import React from "react";
 import { FaHome } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import space from '../assets/space.jpg'
+import space from "../assets/space.jpg";
 
 const ErrorPage = () => {
   return (
@@ -12,10 +12,17 @@ const ErrorPage = () => {
       <div className="hero-overlay bg-opacity-60"></div>
       <div className="hero-content text-center text-neutral-content">
         <div className="max-w-md">
-            <h1 className="font-extrabold text-9xl text-red-500">404</h1>
-          <h3 className="mb-5 text-4xl font-bold text-white"><span className="text-lime-400">Opps!</span> Looks Like You Are Lost In Space</h3>
-          
-          <Link to='/home'><button className="btn btn-primary">Go Back To Home <FaHome></FaHome></button></Link>
+          <h1 className="font-extrabold text-9xl text-red-500">404</h1>
+          <h3 className="mb-5 text-4xl font-bold text-white">
+            <span className="text-lime-400">Opps!</span> Looks Like You Are Lost
+            In Space
+          </h3>
+
+          <Link to="/home">
+            <button className="btn btn-primary">
+              Go Back To Home <FaHome></FaHome>
+            </button>
+          </Link>
         </div>
       </div>
     </div>
