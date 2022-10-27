@@ -18,6 +18,7 @@ const PremiumAccess = () => {
     event.preventDefault();
     const form = event.target;
     form.reset();
+    // toast
     toast.success(
       `Congratulations, ${user.displayName}! You have get the Access of ${title} course!`
     );
