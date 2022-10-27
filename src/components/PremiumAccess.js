@@ -19,7 +19,7 @@ const PremiumAccess = () => {
     const form = event.target;
     form.reset();
     toast.success(
-      `Congratulations! You have get the Access of ${title} course!`
+      `Congratulations, ${user.displayName}! You have get the Access of ${title} course!`
     );
   };
 

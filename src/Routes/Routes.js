@@ -11,7 +11,7 @@ import Register from "../components/Register";
 import Main from "../layout/Main";
 import PrivateRoute from "./PrivateRoute";
 
-// All routes are here
+// All routes are here.
 
 export const routes = createBrowserRouter([
   {
